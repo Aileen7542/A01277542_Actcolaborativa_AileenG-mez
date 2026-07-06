@@ -11,7 +11,7 @@ class Circulo: public Figura {
         Circulo(int); 
         Circulo(int, int, std::string);
         int Circulo::getRadio();
-        void Circulo::setRadio(); 
+        void Circulo::setRadio();
         double circunferencia(); 
         void dibuja();
 };
