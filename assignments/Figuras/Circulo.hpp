@@ -10,8 +10,8 @@ class Circulo: public Figura {
         Circulo(int, int, std::string, int);
         Circulo(int); 
         Circulo(int, int, std::string);
-        int Circulo::getRadio();
-        void Circulo::setRadio();
+        int Circulo::getRadio() const;
+        void Circulo::setRadio(); 
         double circunferencia(); 
         void dibuja();
 };
