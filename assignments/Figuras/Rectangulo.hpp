@@ -7,12 +7,11 @@ class Rectangulo: public Figura {
         int largo; 
     public: 
         Rectangulo(); 
-        Rectangulo(int); 
+        Rectangulo(int, int); 
         Rectangulo(int, int, std::string);
-        Rectangulo(int, int, std::string, int);
-        int Rectangulo::getAncho();
+        int Rectangulo::getAncho() const;
         void Rectangulo::setAncho();
-        int Rectangulo::getLargo();
+        int Rectangulo::getLargo() const;
         void Rectangulo::setLargo();
         int perimetro(); 
         void dibuja();
