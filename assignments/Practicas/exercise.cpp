@@ -1,38 +1,37 @@
+#include "Circulo.hpp"
 #include "iostream"
-using namespace std; 
+#include "cmath"
 
-
-void explorarDireccionesSimples() {
-    cout << "===== PARTE 1: Direcciones con tipos simples =====" << endl;
-    int edad = 20;
-    // TODO 1: Declara un apuntador a int llamado pEdad que apunte a la
-    // direccion de 'edad'. Pista: el * en esta linea NO es multiplicacion,
-    // es parte del TIPO ("apuntador a int").
-    // int* pEdad = ...
-    int* pEdad = &edad;
-
-    // TODO 2: Imprime, en este orden: el valor de edad, la direccion de
-    // edad (&edad), el valor de pEdad, y el valor apuntado por
-    // pEdad (*pEdad). Deberias notar que &edad y pEdad son iguales,
-    // y que edad y *pEdad son iguales.
-    cout << edad << " " << &edad << pEdad << " " << *pEdad;
-
-    // TODO 3: Usando UNICAMENTE el apuntador (no escribas 'edad = 25;'),
-    // cambia el valor de edad a 25.
-    *pEdad = 25;
-
-    // TODO 4: Imprime edad de nuevo para confirmar que si cambio.
-    cout << edad << " " << &edad << pEdad << " " << *pEdad;
-
-    // TODO 5 (por tu cuenta): repite los pasos 1 a 4 con una variable
-    // double en vez de int.
-    double peso = 85.4; 
-    double* pPeso = &peso; 
-    cout << peso << " " << &peso << " " << pPeso << " " << *pPeso;
-    *pPeso = 80.0; 
-    cout << peso << " " << &peso << " " << pPeso << " " << *pPeso;
+Circulo::Circulo():Figura(){
+    radio = 1;
 }
 
-int main(){
+Circulo::Circulo(int x_, int y_, std::string color_, int radio_):Figura(x_, y_, color_){
+    radio = radio_; 
 }
 
+Circulo::Circulo(int radio_):Figura(){
+    radio = radio_;
+}
+
+Circulo::Circulo(int x_, int y_, std::string color_):Figura(x_, y_, color_){
+    radio = 1; 
+}
+
+int Circulo::getRadio() const{
+    return radio; 
+}
+
+void Circulo::setRadio(int radio_) const{
+    radio = radio_;
+}
+
+double Circulo::circunferencia(){
+    return 2 * radio * M_PI;
+}
+
+void Circulo::dibuja(){
+    std::cout << "Soy un circulo de color " << getColor() << "con el centro en (" << std::string(getX()) << ", " <<
+    std::to_string(getY()) << ") de radio = " << std::to_string(radio) << "y circunferencia = "
+    std::to_string(circunferencia()) << "." << std::endl;
+}
