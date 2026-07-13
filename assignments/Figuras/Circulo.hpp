@@ -13,5 +13,7 @@ class Circulo: public Figura {
         int Circulo::getRadio() const;
         void Circulo::setRadio(); 
         double circunferencia(); 
-        void dibuja();
+        double calcularArea(); 
+        //void dibuja();
+        std::string dibuja() override;
 };

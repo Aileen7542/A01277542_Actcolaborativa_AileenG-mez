@@ -30,8 +30,15 @@ double Circulo::circunferencia(){
     return 2 * radio * M_PI;
 }
 
-void Circulo::dibuja(){
+double Circulo::calcularArea(){
+    return (M_PI * radio * radio); 
+}
+
+/*void Circulo::dibuja(){
     std::cout << "Soy un circulo de color " << getColor() << "con el centro en (" << std::to_string(getX()) << ", " <<
     std::to_string(getY()) << ") de radio = " << std::to_string(radio) << "y circunferencia = "
     << std::to_string(circunferencia()) << "." << std::endl;
+}*/
+std::string Circulo::dibuja() {
+    return "Soy un circulo"; 
 }
