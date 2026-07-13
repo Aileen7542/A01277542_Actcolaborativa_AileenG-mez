@@ -11,7 +11,9 @@ class Figura{
         void setX(int);
         void setY(int);
         void setColor(std::string);
-        std::string dibuja();
+        virtual std::string dibuja();
+        virtual ~Figura() = default;
+        virtual double area() = 0; 
     private:
         int x, y;
         std::string color;
