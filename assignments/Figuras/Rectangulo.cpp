@@ -37,8 +37,15 @@ int Rectangulo::perimetro(){
     return (ancho + largo) * 2;
 }
 
-void Rectangulo::dibuja(){
+double Rectangulo::calcularArea(){
+    return (ancho * largo); 
+}
+/*void Rectangulo::dibuja(){
     std::cout << "Soy un rectangulo de color " << getColor() << "(de ancho = " << std::to_string(getAncho()) << ", " <<
     "y de largo = " << std::to_string(getLargo()) << ") de perimetro = " << std::to_string(perimetro) << "." << std::endl;
+}*/
+
+std::string Rectangulo::dibuja(){
+    return "Soy un rectangulo"; 
 }
 

@@ -14,5 +14,7 @@ class Rectangulo: public Figura {
         int Rectangulo::getLargo() const;
         void Rectangulo::setLargo();
         int perimetro(); 
-        void dibuja();
+        double calcularArea(); 
+        //void dibuja();
+        std::string dibuja() override; 
 };
