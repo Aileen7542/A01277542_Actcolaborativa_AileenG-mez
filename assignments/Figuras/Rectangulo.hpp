@@ -10,9 +10,9 @@ class Rectangulo: public Figura {
         Rectangulo(int, int); 
         Rectangulo(int, int, std::string);
         int Rectangulo::getAncho() const;
-        void Rectangulo::setAncho();
+        void Rectangulo::setAncho(int an);
         int Rectangulo::getLargo() const;
-        void Rectangulo::setLargo();
+        void Rectangulo::setLargo(int la);
         int perimetro(); 
         double calcularArea(); 
         //void dibuja();
